@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏与日常的交接点 · 爱游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #1f2a3c;
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrap {
+            max-width: 780px;
+            width: 100%;
+        }
+
+        /* hero — 克制文本区域 */
+        .hero {
+            margin-bottom: 52px;
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0a1a2b;
+            border-left: 4px solid #3182ce;
+            padding-left: 20px;
+        }
+
+        .hero-sub {
+            margin-top: 12px;
+            font-size: 1rem;
+            color: #4a5a72;
+            padding-left: 24px;
+            border-left: 1px solid #cbd5e0;
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        /* 卡片统一风格 */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 36px;
+            margin-bottom: 36px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0,0,0,0.03);
+            border: 1px solid #e9edf2;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0f202c;
+            margin-bottom: 18px;
+            letter-spacing: -0.01em;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin: 28px 0 8px 0;
+        }
+
+        .card p {
+            margin-bottom: 18px;
+            font-size: 0.98rem;
+            color: #2d3f53;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用块 */
+        .insight-block {
+            background: #f6f9fc;
+            border-left: 4px solid #3b82f6;
+            padding: 18px 24px;
+            margin: 28px 0 20px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.96rem;
+            color: #1e293b;
+        }
+
+        .insight-block strong {
+            font-weight: 600;
+            color: #1e3a5f;
+        }
+
+        .insight-block i {
+            font-style: italic;
+            color: #2c5282;
+        }
+
+        /* 场景列表（不用 ul 而用文字段落呈现） */
+        .scene-item {
+            border-top: 1px solid #edf2f7;
+            padding: 16px 0 8px 0;
+        }
+
+        .scene-item:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .scene-label {
+            font-weight: 600;
+            color: #1a365d;
+        }
+
+        .scene-desc {
+            margin-top: 4px;
+            color: #374151;
+        }
+
+        /* 句子内链接样式 */
+        a.inline-link {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b1cdf2;
+            transition: border-bottom 0.15s, color 0.15s;
+        }
+
+        a.inline-link:hover {
+            color: #0b2a6e;
+            border-bottom: 1px solid #1d4ed8;
+        }
+
+        /* 底部 */
+        .footer-note {
+            margin-top: 28px;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid #dde3ea;
+            padding-top: 24px;
+            text-align: left;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 14px;
+            }
+            .card {
+                padding: 24px 20px;
+                border-radius: 14px;
+            }
+            .hero-title {
+                font-size: 1.7rem;
+                padding-left: 14px;
+            }
+            .hero-sub {
+                font-size: 0.92rem;
+                padding-left: 16px;
+            }
+            .card h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .card {
+                padding: 20px 16px;
+            }
+            .insight-block {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- hero 区域：标题 + 点题 -->
+    <div class="hero">
+        <div class="hero-title">游戏不止于「玩」</div>
+        <div class="hero-sub">当互动成为日常语言，<a href="https://home-m-aiyouxi.com.cn" class="inline-link">爱游戏</a> 所指向的，是一种更开放的数字生活方式。</div>
+    </div>
+
+    <!-- 正文卡片 1：定义与观察 -->
+    <div class="card">
+        <h2>从「作品」到「媒介」</h2>
+        <p>过去二十年，游戏被反复定义为第九艺术、竞技项目或娱乐商品。但在日常使用中，它们正逐渐转化为一种社交界面与认知工具。无论是叙事驱动的角色扮演，还是规则简洁的多人派对，其底层逻辑都在训练人的决策、协作与即时反馈能力。</p>
+        <p>这种转变并不剧烈，却十分稳定。<a href="https://home-m-aiyouxi.com.cn" class="inline-link">爱游戏</a> 这个短语，在今天更贴近一种态度：对规则系统的好奇，对虚拟成就的认真，以及对共同体验的珍视。它不再局限于特定设备或类型，而是一种跨场景的参与感。</p>
+    </div>
+
+    <!-- 正文卡片 2：三个观察场景（代替常规特点列表） -->
+    <div class="card">
+        <h2>三种典型接触面</h2>
+
+        <div class="scene-item">
+            <div class="scene-label">碎片时间 · 节奏控制</div>
+            <div class="scene-desc">移动端轻量作品与排队、通勤等场景高度适配。这类交互往往在 3–8 分钟内完成一次闭环，强调低门槛与即时满足，同时也是许多非传统玩家进入游戏世界的第一个入口。</div>
+        </div>
+
+        <div class="scene-item">
+            <div class="scene-label">深度沉浸 · 叙事容器</div>
+            <div class="scene-desc">单机或长线运营作品提供了连续数小时的世界探索。玩家在其中经历角色成长、道德选择与世界观解密，其情感投入不亚于阅读一本长篇小说。这种沉浸是对注意力的主动训练，而非被动消耗。</div>
+        </div>
+
+        <div class="scene-item">
+            <div class="scene-label">同步连接 · 社会演练</div>
+            <div class="scene-desc">多人合作、策略对抗或大型多人在线场景，本质上是一种微型社会系统。沟通效率、资源分配、情绪管理都在其中被反复检验。许多人在游戏里学会了比现实更清晰的分工与表达。</div>
+        </div>
+
+        <!-- 引用提示 -->
+        <div class="insight-block">
+            <strong>提示：</strong> 三种场景并非互斥，同一位玩家可能在一周内交替切换。真正定义体验的，是进入时的心态与目标。<br>
+            <i>—— 与其说“玩游戏”，不如说“进入一个规则系统”。</i>
+        </div>
+    </div>
+
+    <!-- 正文卡片 3：观念延伸 & FAQ 式摘要 -->
+    <div class="card">
+        <h2>几个常见疑问的观察</h2>
+        <p><strong>问：游戏时间是否等于浪费？</strong><br>
+        取决于意图。如果只是被动填充，确实容易产生空洞感；但带着明确目标（解谜、协作、创作）进入时，每一局都是一次微型项目。关键在于是否具备“退出后能复盘”的意识。</p>
+
+        <p><strong>问：什么样的作品值得尝试？</strong><br>
+        没有统一标准，但可以从“规则是否清晰、反馈是否及时、机制是否与兴趣点契合”三个维度评估。<a href="https://home-m-aiyouxi.com.cn" class="inline-link">爱游戏</a> 这个平台的意义，正是帮助不同背景的人找到匹配自身的体验入口，而不是追逐热门榜单。</p>
+
+        <p><strong>问：游戏与工作/学习能共存吗？</strong><br>
+        可以。许多策略游戏训练资源管理，叙事作品锻炼文本理解，合作游戏提升沟通效率。关键在于建立边界——用定时器或任务清单将游戏置于“完成主要事项之后”，它就能成为精力调节器，而非干扰源。</p>
+
+        <!-- 引用段落：访问句自然嵌入 -->
+        <div class="insight-block">
+            <strong>访问提示：</strong> 如果你希望更系统地了解不同作品背后的机制与语境，不妨在 <a href="https://home-m-aiyouxi.com.cn" class="inline-link">爱游戏</a> 浏览分类与讨论。那里的内容更侧重“为什么值得玩”而非简单评分。
+        </div>
+    </div>
+
+    <!-- 结尾区域 -->
+    <div class="footer-note">
+        <p>本页所讨论的是日常语境下游戏作为一种媒介的合理使用。适度参与，保持对现实世界的主动权，是享受数字娱乐的前提。</p>
+        <p style="margin-top: 10px;">© 2025 · 随笔 · 不构成产品建议</p>
+    </div>
+
+</div>
+</body>
+</html>
